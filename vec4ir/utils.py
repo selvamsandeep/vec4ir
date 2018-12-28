@@ -108,7 +108,7 @@ def build_analyzer(tokenizer=None, stop_words=None, lowercase=True):
             'nltk': (word_tokenize, None)  # uses punctuation for GloVe models
         }[tokenizer]
     else:
-        tokenizer, token_pattern = (None, r"(?u)\b\w\w+\b")
+        tokenizer, token_pattern = (None, r"(?u)\b\w\w+\b") # mimics default
         
 
     # allow binary decision for stopwords
